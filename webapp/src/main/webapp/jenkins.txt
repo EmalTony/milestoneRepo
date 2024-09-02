@@ -1,0 +1,12 @@
+1  dnf install java-17-amazon-corretto -y
+    2  java -version
+    3  wget -O /etc/yum.repos.d/jenkins.repo    
+https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    4  rpm --import
+https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+    5  dnf install jenkins -y
+    6  systemctl enable jenkins
+    7  systemctl start jenkins
+    8  systemctl status jenkins
+    9  yum repolist all
+   10  rpm --import
